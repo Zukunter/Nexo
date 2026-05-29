@@ -4,17 +4,18 @@ Nexus is a lightweight tool designed to **nest files in absolutle any way you wa
 
 ---
 
-## Caracteristics
+## Atributes
 
 - **Size** : 500 KB.
 - **Language** : Completely written in Rust.
 - **Multithread** : Yes.
+- **Safe Memory Use** : The maxium amount of memory use for thread is 16KB.
 
 ---
 
 ## Wiki
-- **[Nexus Center File](wiki/nexus.md)** : Define a nexus file so you don't have to write anymore than just nexus.
 - **[Commands](wiki/commands.md)** : General wiki for each avaible command.
+- **[Nexus Default File](wiki/nexus.md)** : Define a nexus file so you don't have to write anymore than just nexus.
 
 --- 
 
