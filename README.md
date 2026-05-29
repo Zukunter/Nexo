@@ -14,7 +14,7 @@ Nexus is a lightweight tool designed to **nest files in absolutle any way you wa
 
 ## Wiki
 - **[Nexus Center File](wiki/nexus.md)** : Define a nexus file so you don't have to write anymore than just nexus.
-- **[Simple Commands](wiki/commands.md)** : General wiki for each avaible command.
+- **[Commands](wiki/commands.md)** : General wiki for each avaible command.
 
 --- 
 
@@ -35,7 +35,8 @@ cargo install nexus
 
 # Example
 
-Let's say you have 3 files you can connect them in the next way
+Let's say you have 3 files :
+
 ### start.rs
 ```rust
 //nexus -i ./functions.rs
@@ -44,10 +45,12 @@ fn main() {
     print_msg(msg_from_other_file);
 }
 ```
+
 ### variables.rs
 ```rust
     let msg_from_other_file: &str = "Hi from other file in nexus";
 ```
+
 ### functions.rs
 ```rust
 fn print_msg(msg: &str) {
@@ -56,7 +59,7 @@ fn print_msg(msg: &str) {
 ```
 --- 
 
-After executing it you will find a file in ../output_path that contains : 
+After executing the next command you will find the file in ../output_path that contains : 
 
 ```bash
 nexus -i start.rs -o ../output_path
@@ -74,6 +77,7 @@ fn main() {
 ```
 
 You could also execute this and see how cargo run the program
+
 ```bash
 nexus -i start.rs -o ../output_path -e cargo run _
 ``` 
