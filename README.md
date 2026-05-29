@@ -1,24 +1,27 @@
 # Nexus
 
 Nexus is a lightweight tool designed to **nest files in any way you want**.  
+
 Think of it as a flexible file organizer: it lets you define custom nesting rules, group files by patterns, and restructure directories without losing track of your data.
 
 ---
 
-## ✨ Features
-- **[Custom nesting](ca://s?q=Nexus_custom_nesting)**: Define how files should be grouped and nested.
-- **[Flexible rules](ca://s?q=Nexus_flexible_rules)**: Organize by extension, size, date, or custom tags.
-- **[Non-destructive](ca://s?q=Nexus_non_destructive)**: Files are moved safely, with rollback options.
-- **[Cross-platform](ca://s?q=Nexus_cross_platform)**: Works on Linux, macOS, and Windows.
-- **[CLI interface](ca://s?q=Nexus_CLI_interface)**: Simple commands to nest, unnest, and preview changes.
+## Wiki
+- **[Nexus Center File](ca://s?q=)**: Define a nexus file where are all rules so dont have to rewrite yourself.
+- **[Simple Commands](ca://s?q=Nexus_CLI_interface)**: Simple commands to nest files or directories and execute commands.
+
+## Caracteristics
+- **Size** : 500 KB;
+- **Language** : Completely written in Rust ;
+- **Multithread** : Yes ;
 
 ---
 
 ## 🚀 Installation
-Clone the repository and build Nexus:
-
+- By Git 
 ```bash
 git clone https://github.com/Zukunter/Nexus.git
 cd Nexus
-cargo build --release
-
+cargo install --path .
+- By cargo
+cargo install nexus
