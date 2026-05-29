@@ -54,7 +54,14 @@ fn print_msg(msg: &str) {
     println!("Preparing... {msg}");
 }
 ```
-After executing nexus -i start.rs -o main.rs. you will find a file in the output path that contains : 
+--- 
+
+After executing it you will find a file in ../output_path that contains : 
+
+```bash
+nexus -i start.rs -o ../output_path
+```
+
 ```rust
 fn print_msg(msg: &str) {
     println!("Preparing... {msg}");
@@ -65,3 +72,8 @@ fn main() {
     print_msg(msg_from_other_file);
 }
 ```
+
+You could also execute this and see how cargo run the program
+```bash
+nexus -i start.rs -o ../output_path -e cargo run _
+``` 
