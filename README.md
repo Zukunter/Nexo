@@ -35,21 +35,33 @@ cargo install nexus
 
 # Example
 
-If in the Rust's file main.rs is :
+Let's say you have 3 files you can connect them in the next way
+### start.rs
 ```rust
+//nexus -i ./functions.rs
 fn main() {
     //nexus -i ./variables.rs
-    println!("{msg_from_other_file}");
+    print_msg(msg_from_other_file);
 }
 ```
-and in ./variables.rs is :
+### variables.rs
 ```rust
     let msg_from_other_file: &str = "Hi from other file in nexus";
 ```
-after executing nexus -i main.rs -o ../proyect/src/main.rs you will find in that output file :
+### functions.rs
 ```rust
+fn print_msg(msg: &str) {
+    println!("Preparing... {msg}");
+}
+```
+After executing nexus -i start.rs -o main.rs. you will find a file in the output path that contains : 
+```rust
+fn print_msg(msg: &str) {
+    println!("Preparing... {msg}");
+}
+
 fn main() {
     let msg_from_other_file: &str = "Hi from other file in nexus";
-    println!("{msg_from_other_file}");
+    print_msg(msg_from_other_file);
 }
 ```
