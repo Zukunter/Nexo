@@ -35,17 +35,17 @@ where Iter: Iterator<Item = &'a str>
 
         match cmd_lower.as_str() {
             // setters
-            "-i" => { 
+            "-i" | "--input"=> { 
                 input = assignment::path(next_cmd) ; 
                 action::set_cwd(input.as_ref().unwrap()); 
             },
-            "-o" => output = assignment::path(next_cmd),
-            "-p" => prefix = assignment::string(next_cmd),
-            "-c" => cascading = assignment::range(next_cmd, cmd),
-            "-r" => recursive = assignment::bool(next_cmd, cmd),
-            "-d" => debug = assignment::bool(next_cmd, cmd),
+            "-o" | "--output" => output = assignment::path(next_cmd),
+            "-p" | "--prefix" => prefix = assignment::string(next_cmd),
+            "-c" | "--cascading" => cascading = assignment::range(next_cmd, cmd),
+            "-r" | "--recursive" => recursive = assignment::bool(next_cmd, cmd),
+            "-d" | "--debug" => debug = assignment::bool(next_cmd, cmd),
             //  actions
-            "-e" => action::execute(next_cmd, cmd, cmds),
+            "-e" | "--execute" => action::execute(next_cmd, cmd, cmds),
         _ => bye_msg!("{cmd} is not a known command")
         }
     }
