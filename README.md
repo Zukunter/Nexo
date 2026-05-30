@@ -63,7 +63,7 @@ fn print_msg(msg: &str) {
 After executing the next command you will find the file in ../output_path that contains : 
 
 ```bash
-nexus -i start.rs -o ../output_path
+nexus -i start.rs -o ../output_path -p //
 ```
 
 ```rust
@@ -80,5 +80,5 @@ fn main() {
 You could also execute this and see how cargo run the program
 
 ```bash
-nexus -i start.rs -o ../output_path -e cargo run _
+nexus -i start.rs -o ../output_path -p // -e cargo run _
 ``` 
